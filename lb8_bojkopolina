@@ -1,0 +1,23 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int countOccurrences(const string& str, char ch) {
+int count = 0;
+for (char c : str) {
+if (c == ch) {
+count++;
+}
+}
+return count;
+}
+int main() {
+string inputString;
+char character;
+cout << "ввод: ";
+getline(cin, inputString);
+cout << "символ: ";
+cin >> character;
+int occurrences = countOccurrences(inputString, character);
+cout << "кількість символів" << character << "в строці: " << occurrences << endl;
+return 0;
+}
